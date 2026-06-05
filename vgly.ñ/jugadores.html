@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jugadores Mexicanos Destacados</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <h1 class="text-center text-success mb-4">
+        🇲🇽 Jugadores Mexicanos Destacados
+    </h1>
+
+    <!-- Información centrada -->
+    <div class="card shadow-sm mb-5">
+
+        <div class="card-body text-center">
+
+            <h3 class="text-primary">
+                 Talento Mexicano
+            </h3>
+
+            <p>
+                México ha contado con futbolistas que han destacado por su talento, liderazgo y compromiso dentro y fuera del campo. Gracias a ellos, la selección nacional ha conseguido importantes logros a lo largo de su historia.
+            </p>
+
+            <h3 class="text-primary mt-4">
+                 Algunos Referentes
+            </h3>
+
+            <p>
+                Hugo Sánchez, Rafael Márquez, Guillermo Ochoa, Javier Hernández, Edson Álvarez y Santiago Giménez son algunos de los jugadores que han dejado huella en el fútbol mexicano.
+            </p>
+
+            <h3 class="text-primary mt-4">
+                🇲🇽 Selección Mexicana
+            </h3>
+
+            <p>
+                La Selección Mexicana es una de las más importantes de la CONCACAF y ha participado en numerosas Copas del Mundo, representando al país con orgullo y pasión.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Carrusel -->
+    <h2 class="text-center text-success mb-4">
+         Jugadores Destacados
+    </h2>
+
+    <div id="carruselJugadores" class="carousel slide mb-5" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="santi.jpg" class="d-block w-100 rounded" style="height:500px; object-fit:cover;" alt="Santiago Giménez">
+
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                    <h5>Santiago Giménez</h5>
+                    <p>Delantero mexicano que destaca por su capacidad goleadora.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="edson.png" class="d-block w-100 rounded" style="height:500px; object-fit:cover;" alt="Edson Álvarez">
+
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                    <h5>Edson Álvarez</h5>
+                    <p>Mediocampista y líder de la Selección Mexicana.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="ochoa.jpg" class="d-block w-100 rounded" style="height:500px; object-fit:cover;" alt="Guillermo Ochoa">
+
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                    <h5>Guillermo Ochoa</h5>
+                    <p>Portero histórico reconocido por sus actuaciones mundialistas.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="marquez.jpg" class="d-block w-100 rounded" style="height:500px; object-fit:cover;" alt="Rafael Márquez">
+
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                    <h5>Rafael Márquez</h5>
+                    <p>Capitán histórico y referente del fútbol mexicano.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="chicharito.jpg" class="d-block w-100 rounded" style="height:500px; object-fit:cover;" alt="Javier Hernández">
+
+                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                    <h5>Javier Hernández</h5>
+                    <p>Máximo goleador histórico de la Selección Mexicana.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselJugadores" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselJugadores" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+    <!-- Contador -->
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="card shadow-lg border-success">
+
+                <div class="card-body text-center">
+
+                    <h5 class="text-success">
+                        ⏳ Cuenta regresiva
+                    </h5>
+
+                    <h2 id="contador" class="text-danger fw-bold">
+                        Cargando...
+                    </h2>
+
+                    <p>
+                        para el Mundial 2026
+                    </p>
+
+                    <p class="text-muted small">
+                        🇲🇽 México • 🇺🇸 Estados Unidos • 🇨🇦 Canadá
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function actualizarContador() {
+
+    const fechaMundial = new Date("Jun 11, 2026 00:00:00").getTime();
+    const ahora = new Date().getTime();
+
+    const diferencia = fechaMundial - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+    document.getElementById("contador").innerHTML = dias + " días";
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
